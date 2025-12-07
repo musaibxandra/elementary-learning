@@ -73,8 +73,9 @@ export async function POST(request: NextRequest) {
     });
 
     // Recurring payment settings - simple and easy to modify
-    const recurringType = 'daily'; // Options: 'daily', 'weekly', 'monthly', 'custom'
+    const recurringType = 'Daily'; // Options: 'daily', 'weekly', 'monthly', 'custom'
     const executedTimes = 2; // How many times to charge
+
     const retryCount = 3; // How many times to retry if payment fails
 
     const response = await fetch(`${baseURL}/v2/ExecutePayment`, {
