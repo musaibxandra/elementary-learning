@@ -1,8 +1,9 @@
 'use client';
 // app/error/page.tsx
 import { useSearchParams } from 'next/navigation';
+import { Suspense } from 'react';
 
-export default function ErrorPage() {
+function ErrorContent() {
   const searchParams = useSearchParams();
   const paymentId = searchParams.get('paymentId') || searchParams.get('Id'); // MyFatoorah appends these
 
@@ -38,5 +39,21 @@ export default function ErrorPage() {
         </div>
       </div>
     </div>
+  );
+}
+
+export default function ErrorPage() {
+  return (
+    <Suspense fallback={
+      <div className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 py-12 sm:py-16 bg-red-50 w-full overflow-x-hidden">
+        <div className="max-w-2xl w-full min-w-0 text-center">
+          <div className="bg-white border-2 border-red-200 rounded-xl sm:rounded-2xl p-6 sm:p-8 md:p-10 shadow-lg">
+            <p className="text-sm sm:text-base text-gray-600">Loading...</p>
+          </div>
+        </div>
+      </div>
+    }>
+      <ErrorContent />
+    </Suspense>
   );
 }
