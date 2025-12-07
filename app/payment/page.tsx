@@ -30,11 +30,7 @@ const Payout = () => {
         const methodList = Array.isArray(data) ? data : [];
         setMethods(methodList);
         setLoadingMethods(false);
-
-        // Auto-select first method if available
-        if (methodList.length > 0) {
-          setSelectedMethodId(methodList[0].PaymentMethodId);
-        }
+        // No auto-selection - user must explicitly select a payment method
       })
       .catch((err) => {
         console.error('Failed to load payment methods:', err);
