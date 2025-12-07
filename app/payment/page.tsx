@@ -100,8 +100,9 @@ const Payout = () => {
 
       const win = window.open(data.paymentUrl, '_blank');
       if (!win) window.location.href = data.paymentUrl;
-    } catch (err: any) {
-      alert('Payment Error: ' + err.message);
+    } catch (err: unknown) {
+      const message = err instanceof Error ? err.message : String(err);
+      alert('Payment Error: ' + message);
     } finally {
       setIsProcessing(false);
     }

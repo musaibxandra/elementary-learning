@@ -11,18 +11,18 @@ const Navbar = () => {
 
   return (
     <header className='sticky top-0 z-50 bg-white shadow-sm border-b w-full'>
-      <nav className='w-full px-4 sm:px-6 lg:px-8 py-5'>
+      <nav className='w-full px-4 sm:px-6 lg:px-8 py-3'>
         <div className='flex items-center justify-between max-w-7xl mx-auto w-full'>
           {/* Logo */}
           <Link href="/" className='flex cursor-pointer gap-2 items-center flex-shrink-0'>
             <Image
               src="/icons/logo.jpg"
               alt="Style logo"
-              width={68}
-              height={68}
-              className='w-10 h-10 sm:w-12 sm:h-12 object-contain'
+              width={65}
+              height={65}
+              className='w-14 h-14 sm:w-16 sm:h-16 md:w-18 md:h-18 object-contain'
             />
-            <span className='text-base sm:text-lg font-bold whitespace-nowrap'>Elementary Learning</span>
+            <span className='text-base sm:text-lg font-bold whitespace-nowrap'>Rehab Sharif Learning</span>
           </Link>
 
           {/* Desktop Navigation */}

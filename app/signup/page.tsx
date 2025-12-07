@@ -47,7 +47,7 @@ export default function SignUpPage() {
       <div className="max-w-md w-full bg-white rounded-xl shadow-lg p-8">
         <div className="text-center mb-8">
           <h1 className="text-3xl font-bold text-gray-900">Create Account</h1>
-          <p className="mt-2 text-gray-600">Join us today – it's free!</p>
+          <p className="mt-2 text-gray-600">Join us today – it&apos;s free!</p>
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-6">
