@@ -22,7 +22,7 @@ const Navbar = () => {
               height={65}
               className='w-14 h-14 sm:w-16 sm:h-16 md:w-18 md:h-18 object-contain'
             />
-            <span className='text-base sm:text-lg font-bold whitespace-nowrap'>Rehab Sharif Learning</span>
+            <span className='text-base sm:text-lg font-bold whitespace-nowrap'>Elementary Learning</span>
           </Link>
 
           {/* Desktop Navigation */}

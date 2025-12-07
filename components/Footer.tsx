@@ -30,7 +30,7 @@ export default function Footer() {
                 className="w-16 h-16 sm:w-20 sm:h-20 object-contain">
               </Image>
             </Link>
-            <h3 className="text-xl sm:text-2xl font-semibold">Rehab Sharif Learning</h3>
+            <h3 className="text-xl sm:text-2xl font-semibold">Elementary Learning</h3>
             <p className="text-xs sm:text-sm opacity-80">
               H369 R7307 B373 Abu Ghazal <br/> Tubli, Manama, Bahrain
             </p>
