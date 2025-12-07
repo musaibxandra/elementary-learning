@@ -1,10 +1,9 @@
 'use client';
 // app/success/page.tsx (or pages/success.tsx if Pages Router)
 import { useSearchParams } from 'next/navigation'; // For query params
-import Link from 'next/link';
-import { Button } from '@/components/ui/button';
+import { Suspense } from 'react';
 
-export default function SuccessPage() {
+function SuccessContent() {
   const searchParams = useSearchParams();
   const invoiceId = searchParams.get('invoiceId'); // MyFatoorah appends params like ?invoiceId=123
 
@@ -34,5 +33,21 @@ export default function SuccessPage() {
         </div>
       </div>
     </div>
+  );
+}
+
+export default function SuccessPage() {
+  return (
+    <Suspense fallback={
+      <div className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 py-12 sm:py-16 w-full overflow-x-hidden">
+        <div className="max-w-2xl w-full min-w-0 text-center">
+          <div className="bg-green-50 border-2 border-green-200 rounded-xl sm:rounded-2xl p-6 sm:p-8 md:p-10 shadow-lg">
+            <p className="text-sm sm:text-base text-gray-600">Loading...</p>
+          </div>
+        </div>
+      </div>
+    }>
+      <SuccessContent />
+    </Suspense>
   );
 }
