@@ -15,8 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Rehab Sharif Learning",
-  description: "Exploring Learning",
+  title: "Elementary Learning",
+  description: "Explore Learning",
 };
 
 export default function RootLayout({
